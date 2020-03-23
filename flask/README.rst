@@ -14,6 +14,17 @@ Flask extension used:
 * Flask-Testing
 * Flask-WTF
 
+============
+Using Docker
+============
+
+.. code-block:: docker
+
+    docker build -t notejam .
+    docker run -ti --rm notejam python tests.py
+    docker run -ti --rm -p 5000:5000 --name notejam notejam
+
+
 ==========================
 Installation and launching
 ==========================
