@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - name: notejam
-          image: @IMAGE_NAME@
+          image: rr
