@@ -15,5 +15,16 @@ spec:
         app: notejam
     spec:
       containers:
-        - name: notejam
+        - env:
+            - name: ENVIRONMENT
+              value: production
+            - name: SQLALCHEMY_DATABASE_URI
+              valueFrom:
+                secretKeyRef:
+                  key: database_uri
+                  name: notejam-dbcreds
+
+          name: notejam
           image: @IMAGE_NAME@
+
+
